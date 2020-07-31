@@ -72,12 +72,12 @@ RUN chown -R node-red:root /usr/src/node-red && \
 USER node-red
 
 # Env variables
-ENV NODE_RED_VERSION=1.1.2 \
-    NODE_PATH=/usr/src/node-red/node_modules:/data/node_modules \
-    FLOWS=flows.json
+ENV NODE_RED_VERSION=1.1.2
+ENV NODE_PATH=/usr/src/node-red/node_modules:/data/node_modules
+ENV FLOWS=flows.json
 
 # ENV NODE_RED_ENABLE_SAFE_MODE=true    # Uncomment to enable safe start mode (flows not running)
-ENV NODE_RED_ENABLE_PROJECTS=true     # Uncomment to enable projects option
+ENV NODE_RED_ENABLE_PROJECTS=true
 
 # User configuration directory volume
 VOLUME ["/data"]
