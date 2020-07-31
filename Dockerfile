@@ -1,9 +1,6 @@
 #### Stage BASE ########################################################################################################
 FROM amd64/node:10-alpine AS base
 
-# Copy scripts
-COPY scripts/*.sh /tmp/
-
 # Install tools, create Node-RED app and data dir, add user and set rights
 RUN set -ex && \
     apk add --no-cache \
