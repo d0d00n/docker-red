@@ -65,7 +65,7 @@ COPY --from=build /usr/src/node-red/prod_node_modules ./node_modules
 
 # Chown, install devtools & Clean up
 RUN chown -R node-red:root /usr/src/node-red && \
-    /tmp/install_devtools.sh && \
+    apk add --no-cache --virtual devtools build-base linux-headers udev python python3 && \
     rm -r /tmp/*
 
 USER node-red
