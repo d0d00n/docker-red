@@ -33,6 +33,8 @@ FROM base AS build
 RUN apk add --no-cache --virtual buildtools build-base linux-headers udev python && \
     npm install --unsafe-perm --no-update-notifier --no-fund --only=production && \
     npm install node-red-dashboard && \
+	npm install passport && \
+	npm install passport-oauth && \
     cp -R node_modules prod_node_modules
 
 #### Stage RELEASE #####################################################################################################
