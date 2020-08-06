@@ -35,6 +35,7 @@ RUN apk add --no-cache --virtual buildtools build-base linux-headers udev python
     npm install node-red-dashboard && \
 	npm install passport && \
 	npm install passport-oauth && \
+	npm install @exlinc/keycloak-passport && \
     cp -R node_modules prod_node_modules
 
 #### Stage RELEASE #####################################################################################################
